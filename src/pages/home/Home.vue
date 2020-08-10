@@ -1,6 +1,6 @@
 <template>
   <div>
-    home
+    <home-header></home-header>
   </div>
 </template>
 
@@ -8,7 +8,9 @@
 import HomeHeader from './components/Header.vue'
 export default {
   name: 'Home',
-  component: HomeHeader // 局部组件
+  components: {
+    HomeHeader
+  } // 局部组件
 }
 </script>
 
