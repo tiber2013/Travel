@@ -2,7 +2,7 @@
 <div>
   <div class="title">热销推荐</div>
     <ul>
-    <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+    <li class="item border-bottom" v-for="item of list" :key="item.id">
       <div class="item-wrapper">
         <img class="item-img" :src="item.imgUrl" />
       </div>
@@ -19,25 +19,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1501/40/40b2b6c951b28fdd.water.jpg_140x140_1c863e5c.jpg',
-        title: '水立方',
-        desc: '这是水立方的描述文字'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1501/40/40b2b6c951b28fdd.water.jpg_140x140_1c863e5c.jpg',
-        title: '水立方',
-        desc: '这是水立方的描述文字'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1501/40/40b2b6c951b28fdd.water.jpg_140x140_1c863e5c.jpg',
-        title: '水立方',
-        desc: '这是水立方的描述文字'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
