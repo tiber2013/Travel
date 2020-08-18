@@ -17,11 +17,15 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   name: 'HomeHeader',
-  props: {
-    city: String
+  computed: {
+    ...mapState(['city'])
   }
+  // props: {
+  //   city: String
+  // }
 }
 </script>
 
@@ -51,7 +55,8 @@ export default {
     border-radius: .1rem
     color: #ccc
   .header-right
-    width:1.24rem
+    min-width:1.04rem
+    padding:0 .1rem
     float: right
     .arrow-icon
       font-size:.24rem
