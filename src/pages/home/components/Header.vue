@@ -58,6 +58,7 @@ export default {
     min-width:1.04rem
     padding:0 .1rem
     float: right
+    color: #fff
     .arrow-icon
       font-size:.24rem
 </style>
