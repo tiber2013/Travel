@@ -1,6 +1,10 @@
 <template>
 <div class="detail">
-  <detail-banner></detail-banner>
+  <detail-banner
+  :sightName="sightName"
+  :bannerImg="bannerImg"
+  :bannerImgs="galleryImgs"
+  ></detail-banner>
   <detail-header></detail-header>
   <div class="content">
     <detail-list :list="list"></detail-list>
@@ -24,7 +28,7 @@ export default {
     return {
       sightName: '',
       bannerImg: '',
-      gallaryImgs: [],
+      galleryImgs: [],
       list: []
     }
   },
@@ -42,7 +46,7 @@ export default {
         const data = res.data
         this.sightName = data.sightName
         this.bannerImg = data.bannerImg
-        this.gallaryImgs = data.gallaryImgs
+        this.galleryImgs = data.galleryImgs
         this.list = data.categoryList
       }
     }
